@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 
 import configureStore from 'store';
 import history from 'utils/history';
+import Wrapper from 'MultyLanguage';
 
 import './app.less';
 
@@ -16,7 +17,9 @@ class App extends React.Component {
       <Provider store={store}>
         <BrowserRouter>
           <Switch>
-            <Routers />
+            <Wrapper>
+              <Routers />
+            </Wrapper>
           </Switch>
         </BrowserRouter>
       </Provider>

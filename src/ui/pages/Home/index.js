@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from 'antd';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { FormattedMessage } from 'react-intl';
 
 import './style.less';
 
@@ -12,7 +13,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <p className="fs32">Đây là trang Home</p>
-        <p>Xin chào {username}</p>
+        <p>
+          <FormattedMessage id="hello" /> {username}
+        </p>
         <Link to="/about">
           <Button type="primary">About</Button>
         </Link>
