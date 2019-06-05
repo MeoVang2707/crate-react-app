@@ -10,6 +10,11 @@ const listPage = {
     loading: () => Loading(),
     modules: 'home',
   }),
+  About: Loadable({
+    loader: () => import('ui/pages/About'),
+    loading: () => Loading(),
+    modules: 'about',
+  }),
 
   NotFound,
 };

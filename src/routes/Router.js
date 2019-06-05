@@ -10,6 +10,7 @@ import PrivateRoute from './PrivateRouter';
 export default () => (
   <Switch>
     <Route exact path="/" component={listPage.Home} />
+    <Route exact path="/about" component={listPage.About} />
     {/* <Route
       exact
       path="/tai-khoan/:title--:id([0-9].*).html"
