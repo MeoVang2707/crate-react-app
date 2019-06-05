@@ -2,14 +2,13 @@ import React from 'react';
 import Loadable from 'react-loadable';
 
 import NotFound from 'ui/pages/NotFound';
-
-const LoadingComponent = () => <h1> Please wait... </h1>;
+import Loading from 'ui/pages/Loading';
 
 const listPage = {
   Home: Loadable({
     loader: () => import('ui/pages/Home'),
-    loading: () => LoadingComponent,
-    modules: ['home'],
+    loading: () => Loading(),
+    modules: 'home',
   }),
 
   NotFound,
